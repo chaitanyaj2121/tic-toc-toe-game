@@ -1,0 +1,134 @@
+* {
+    margin: 0;
+    padding: 0;
+    /* box-sizing: border-box; */
+}
+
+body {
+    height: 100%;
+    background-color: #522258;
+    font-family: Arial, sans-serif;
+}
+
+nav {
+    background-color: #522258;
+    color: white;
+    padding: 10px;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.game-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    /* margin-top:10vh ; */
+    align-items: center;
+    background-color: #180429;
+}
+
+nav ul {
+    list-style-type: none;
+}
+
+.line{
+    height: 3px;
+    width: 0;
+    position: absolute;
+    background-color:yellow;
+    transition: width 1s ease-in-out;
+}
+.container {
+    display: grid;
+    grid-template-columns: repeat(3, 10vw);
+    grid-template-rows: repeat(3, 10vw);
+    position: relative;
+    margin-bottom: 1rem;
+
+    
+}
+.over{
+    width: 10rem;
+    transition: width 1s ease-in-out;
+    font-size: 2rem;
+    color: lightgreen;
+}
+.imgbox img{
+    height: 100px;
+    width: 100px;
+    display: none;
+}
+
+/* Box Styles */
+.box {
+    border: 2px solid #4A4E69;
+    font-size: 6vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(0, 242, 255);
+    transition: background-color 0.3s, transform 0.3s;
+    border-radius: 10px;
+}
+
+
+
+/* Hover Effect */
+
+.container .box:hover{
+     cursor: pointer;
+    background-color: rgba(2, 255, 247, 0.847);
+}
+.game-info{
+   margin: 2rem;
+}
+
+.game-inside-info{
+    display: flex;
+    flex-direction: column;
+    font-size: 2vh;
+   align-items: center;
+   justify-content: center;
+}
+.bl{
+    border-left: 0;
+}
+
+
+.br{
+    border-right: 0;
+}
+
+
+.bt{
+    border-top: 0;
+}
+
+.bb{
+    border-bottom: 0;
+}
+
+#reset{
+    margin-top: 8px;
+    background: rgb(15, 70, 209);
+    color: white;
+    font-size: 1.25rem;
+    border: 2px solid darkgreen;
+    border-radius: 0.25rem;
+    cursor: pointer;    
+    padding: 0.5rem;
+}
+#reset:hover{
+    background-color: #e00202;
+}
+
+@media (max-width:800px){
+    .game-container{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-top: 18vh;
+    }
+    
+}
